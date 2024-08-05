@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-server
+spec:
+  selector:
+    app: echo-server
+  ports:
+    - name: http
+      port: 80
+      targetPort: 9000
+    - name: websocket
+      protocol: TCP
+      port: 8080
+      targetPort: 8765
