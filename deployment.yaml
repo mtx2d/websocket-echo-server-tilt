@@ -16,7 +16,7 @@ spec:
         - name: echo-server
           image: echo-server-image
           ports:
-            - name: websocket
-              containerPort: 8765
             - name: http
               containerPort: 9000
+            - name: websocket
+              containerPort: 8765
