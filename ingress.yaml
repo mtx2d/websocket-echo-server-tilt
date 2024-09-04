@@ -1,22 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: echo-server-ingress
+  name: ingress-rules
   annotations:
     # nginx.ingress.kubernetes.io/rewrite-target: /
+    # ingress.kubernetes.io/ssl-redirect: "false"
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: nginx.local #"192.168.49.2.nip.io"
-    - http:
+    - host: api.livechat.local
+      http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: echo-server
-                port:
-                  number: 80
           - path: /ws/
             pathType: Prefix
             backend:
