@@ -17,4 +17,4 @@ spec:
           image: echo-server-image
           ports:
             - name: websocket
-              containerPort: 80
+              containerPort: 8089
