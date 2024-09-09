@@ -6,10 +6,7 @@ spec:
   selector:
     app: echo-server
   ports:
-    - name: http
-      port: 80
-      targetPort: 9000
     - name: websocket
       protocol: TCP
-      port: 8080
-      targetPort: 8765
+      port: 80
+      targetPort: 8089

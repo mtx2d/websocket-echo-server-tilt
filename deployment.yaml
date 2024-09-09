@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: echo-server
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: echo-server
@@ -17,6 +17,4 @@ spec:
           image: echo-server-image
           ports:
             - name: websocket
-              containerPort: 8765
-            - name: http
-              containerPort: 9000
+              containerPort: 8089
